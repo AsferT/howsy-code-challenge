@@ -8,17 +8,8 @@
     <arg name="extensions" value="php"/>
 
     <!-- Directories to scan -->
-    <file>bin/</file>
-    <file>config/</file>
-    <file>public/</file>
     <file>src/</file>
     <file>tests/</file>
-
-    <!-- Ignore app bootstrap -->
-    <exclude-pattern>config/bootstrap.php</exclude-pattern>
-
-    <!-- Ignore the migrations files, they are auto-generated -->
-    <exclude-pattern>src/migrations/*</exclude-pattern>
 
     <!-- Ignore the bootstrap file for tests -->
     <exclude-pattern>tests/bootstrap.php</exclude-pattern>
