@@ -1,0 +1,40 @@
+{
+    "type": "project",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.1"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/phpunit/"
+        }
+    },
+    "scripts": {
+        "run-tests": "composer run-phpunit && composer run-phpcs && composer run-phpmd && composer run-phplint",
+        "run-phpcs": "vendor/bin/phpcs",
+        "run-phpmd": "vendor/bin/phpmd src text phpmd.xml",
+        "run-phplint": "vendor/bin/phplint",
+        "run-phpunit": "vendor/bin/phpunit --testdox"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.5",
+        "overtrue/phplint": "^5.3",
+        "phpmd/phpmd": "^2.13",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7"
+    }
+}
