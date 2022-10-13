@@ -4,8 +4,6 @@ services:
   php:
     build:
       context: ./docker
-      args:
-        TIMEZONE: ${TIMEZONE}
     ports:
       - "8080:80"
     volumes:

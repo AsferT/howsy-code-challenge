@@ -24,7 +24,7 @@ class Basket implements BasketInterface
     /**
      * @throws ProductMoreThanOneException
      */
-    public function add(Product $product)
+    public function add(Product $product): void
     {
         if ($this->products->contains($product)) {
             throw new ProductMoreThanOneException(

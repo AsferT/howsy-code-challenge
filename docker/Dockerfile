@@ -18,7 +18,7 @@ RUN set -eux; \
 COPY ../ /var/www/html/
 
 # Get the Timezone Argument
-ARG TIMEZONE
+ENV TIMEZONE='Europe/London'
 
 # Copy Default PHP Configuration
 COPY php.ini /usr/local/etc/php/conf.d/docker-php-config.ini

@@ -11,6 +11,7 @@ class BasketTotalOffer extends Offer
 {
     protected float $discount = 0.05;
 
+    /** @SuppressWarnings(PHPMD.UnusedFormalParameter) */
     public function supports(User $user, Basket $basket): bool
     {
         return $basket->getTotal() >= 150.00;

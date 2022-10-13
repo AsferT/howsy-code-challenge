@@ -25,6 +25,7 @@ class BasketTest extends TestCase
     private Basket $basket;
     private Collection $products;
 
+    /** @SuppressWarnings(PHPMD.StaticAccess) */
     protected function setUp(): void
     {
         $this->mockedUser = Mockery::mock(User::class);
@@ -52,8 +53,8 @@ class BasketTest extends TestCase
      */
     public function testThrowMoreThanOneProductException(): void
     {
-        $expectedExceptionErrorMessage = 'Product already exists in the basket. Only one of this product is allowed';
-        $this->expectExceptionObject(new ProductMoreThanOneException($expectedExceptionErrorMessage));
+        $expectedErrorMessage = 'Product already exists in the basket. Only one of this product is allowed';
+        $this->expectExceptionObject(new ProductMoreThanOneException($expectedErrorMessage));
 
         $this->basket = new Basket($this->mockedUser);
         $product1 = new EICRCertificateProduct('P004', 'EICR Certificate', 51.00);
@@ -79,7 +80,7 @@ class BasketTest extends TestCase
         // (100+200) * (1 - (0.10 + 0.05))
         // 300 * (1 - 0.15)
         // 300 * 0.85
-        // 255
+        // 255.00
         $this->assertSame(255.00, $this->basket->getTotal());
     }
 

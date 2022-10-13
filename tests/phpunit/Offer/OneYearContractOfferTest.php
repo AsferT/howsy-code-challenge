@@ -20,6 +20,7 @@ class OneYearContractOfferTest extends TestCase
     private User|MockInterface $user;
     private OneYearContractOffer $oneYearContractOffer;
 
+    /** @SuppressWarnings(PHPMD.StaticAccess) */
     protected function setUp(): void
     {
         $this->basket = Mockery::mock(Basket::class);

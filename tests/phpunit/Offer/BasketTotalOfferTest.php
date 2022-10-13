@@ -20,6 +20,7 @@ class BasketTotalOfferTest extends TestCase
     private User $user;
     private BasketTotalOffer $basketTotalOffer;
 
+    /** @SuppressWarnings(PHPMD.StaticAccess) */
     protected function setUp(): void
     {
         $this->basket = Mockery::mock(Basket::class);

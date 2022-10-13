@@ -27,7 +27,7 @@
     "scripts": {
         "run-tests": "composer run-phpunit && composer run-phpcs && composer run-phpmd && composer run-phplint",
         "run-phpcs": "vendor/bin/phpcs",
-        "run-phpmd": "vendor/bin/phpmd src text phpmd.xml",
+        "run-phpmd": "vendor/bin/phpmd src text phpmd.xml && vendor/bin/phpmd tests text phpmd.xml",
         "run-phplint": "vendor/bin/phplint",
         "run-phpunit": "vendor/bin/phpunit --testdox"
     },

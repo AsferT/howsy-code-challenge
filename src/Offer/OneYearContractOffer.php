@@ -11,6 +11,7 @@ class OneYearContractOffer extends Offer
 {
     protected float $discount = 0.10;
 
+    /** @SuppressWarnings(PHPMD.UnusedFormalParameter) */
     public function supports(User $user, Basket $basket): bool
     {
         return $user->hasOffer(self::class);

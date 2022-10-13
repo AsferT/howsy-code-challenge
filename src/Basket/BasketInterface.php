@@ -8,6 +8,6 @@ use App\Product\Product;
 
 interface BasketInterface
 {
-    public function add(Product $product);
-    public function total();
+    public function add(Product $product): void;
+    public function total(): void;
 }
