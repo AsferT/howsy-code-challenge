@@ -7,5 +7,4 @@
 5. Done - My Test
 6. Done - Actual Tests
 7. Done - Delete My Test
-8. Pending - Refactor Code
-9. 
+8. Done - Refactor Code
